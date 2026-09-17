@@ -1,38 +1,74 @@
 import type { Metadata } from "next";
-import { Camera, MapPin } from "lucide-react";
+import Image from "next/image";
+import { Camera, MapPin, PlayCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Impact & Gallery",
   description:
-    "Photos and stories from Hearts to Hands distributions, sponsorships, and visitations — organized in one place instead of scattered across posts.",
+    "Photos and videos from Hearts to Hands distributions and visitations — organized in one place instead of scattered across posts.",
 };
 
-// Preview entries — replace with real dated photos/captions from distributions and visitations.
-const entries = [
+const photoEntries = [
   {
-    date: "August 2025",
+    date: "2025",
+    title: "Food Basket Packing",
+    location: "[Location]",
+    caption: "Grocery bags packed and ready ahead of a distribution day.",
+    src: "/media/photos/food-basket-packing.jpeg",
+  },
+  {
+    date: "2025",
     title: "Blind Centre Visitation",
     location: "[Location]",
     caption:
-      "Visited with LAUTECH's Graduating Muslim Students group, delivering essentials to residents.",
+      "Visited with LAUTECH's Graduating Muslim Students group, delivering essentials to students and residents.",
+    src: "/media/photos/blind-centre-visitation-1.jpeg",
   },
   {
-    date: "June 2025",
-    title: "Day of Arafah Feeding Program",
+    date: "2025",
+    title: "Blind Centre Visitation",
     location: "[Location]",
-    caption: "Hot meals delivered to 25 families across two communities.",
+    caption: "The team and volunteers with students at the centre.",
+    src: "/media/photos/blind-centre-visitation-2.jpeg",
   },
   {
-    date: "March 2025",
-    title: "Eid Clothing & Gift Drive",
+    date: "2025",
+    title: "Blind Centre Visitation",
     location: "[Location]",
-    caption: "60 children received new outfits and small gifts ahead of Eid.",
+    caption: "Students gathered during the visitation.",
+    src: "/media/photos/blind-centre-visitation-3.jpeg",
   },
   {
-    date: "[Date]",
-    title: "[Distribution or sponsorship name]",
+    date: "2025",
+    title: "Blind Centre Visitation",
     location: "[Location]",
-    caption: "[What was given, to whom, and where.]",
+    caption: "Volunteers with students after item distribution.",
+    src: "/media/photos/blind-centre-visitation-4.jpeg",
+  },
+  {
+    date: "2025",
+    title: "Blind Centre Visitation",
+    location: "[Location]",
+    caption: "The wider group during the visitation program.",
+    src: "/media/photos/blind-centre-visitation-5.jpeg",
+  },
+  {
+    date: "2025",
+    title: "Blind Centre Visitation",
+    location: "[Location]",
+    caption: "A quiet moment between students during the visit.",
+    src: "/media/photos/blind-centre-visitation-6.jpeg",
+  },
+];
+
+const videoEntries = [
+  {
+    title: "Blind Centre Visitation — clip 1",
+    src: "/media/videos/blind-centre-visitation-1.mp4",
+  },
+  {
+    title: "Blind Centre Visitation — clip 2",
+    src: "/media/videos/blind-centre-visitation-2.mp4",
   },
 ];
 
@@ -58,10 +94,18 @@ export default function ImpactPage() {
 
       <section className="section">
         <div className="container-page grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {entries.map((entry) => (
-            <div key={entry.title + entry.date} className="card overflow-hidden">
-              <div className="aspect-[4/3] bg-muted border-b border-border grid place-items-center text-muted-foreground">
-                <Camera className="w-8 h-8" strokeWidth={1.5} />
+          {photoEntries.map((entry, i) => (
+            <div
+              key={entry.title + i}
+              className="card overflow-hidden"
+            >
+              <div className="relative aspect-[4/3] bg-muted border-b border-border">
+                <Image
+                  src={entry.src}
+                  alt={entry.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
                 <div className="text-xs font-semibold text-primary uppercase tracking-widest">
@@ -81,11 +125,36 @@ export default function ImpactPage() {
             </div>
           ))}
         </div>
+      </section>
 
-        <p className="mt-8 text-xs text-muted-foreground">
-          Photos are placeholders for this site build — swap in real images
-          from distributions, sponsorships, and visitations.
-        </p>
+      <section className="section bg-secondary/40 border-y border-border">
+        <div className="container-page">
+          <span className="eyebrow">
+            <PlayCircle className="w-4 h-4" />
+            Videos
+          </span>
+          <h2 className="mt-4 font-display text-3xl sm:text-4xl font-extrabold text-primary-deep">
+            From the visitation
+          </h2>
+
+          <div className="mt-10 grid sm:grid-cols-2 gap-6">
+            {videoEntries.map((video) => (
+              <div key={video.src} className="card overflow-hidden">
+                <video
+                  src={video.src}
+                  controls
+                  preload="metadata"
+                  className="w-full aspect-video bg-black"
+                />
+                <div className="p-4">
+                  <div className="text-sm font-semibold text-primary-deep">
+                    {video.title}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
     </div>
   );

@@ -4,7 +4,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { NewsletterForm } from "./newsletter-form";
 import { InstagramIcon, FacebookIcon, XIcon } from "./social-icons";
 
-import Logo from "@/public/logo/h2h.png";
+import Logo from "@/public/logo/logo.jpg";
 
 const socials = [
   {
@@ -49,13 +49,11 @@ export function Footer() {
       <div className="container-page py-14 grid gap-12 md:grid-cols-12">
         <div className="md:col-span-5 space-y-4">
           <Link href="/" className="inline-flex items-center gap-3">
-            <div className="bg-white rounded-2xl p-1.5">
-              <Image
-                src={Logo}
-                alt="Hearts to Hands"
-                className="h-12 w-12 object-contain rounded-xl"
-              />
-            </div>
+            <Image
+              src={Logo}
+              alt="Hearts to Hands"
+              className="h-14 w-14 object-contain mix-blend-screen"
+            />
             <div>
               <div className="font-display text-lg font-bold">
                 HEARTS to HANDS

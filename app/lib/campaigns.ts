@@ -9,6 +9,7 @@ export type Campaign = {
   target: number;
   raised: number;
   outcome?: string;
+  image?: string;
 };
 
 // Preview data — replace with the organization's real campaign figures before launch.
@@ -23,6 +24,7 @@ export const campaigns: Campaign[] = [
     startDate: "2026-02-18",
     target: 800000,
     raised: 310000,
+    image: "/media/photos/food-basket-packing.jpeg",
   },
   {
     slug: "eid-clothing-drive",
@@ -36,6 +38,7 @@ export const campaigns: Campaign[] = [
     target: 400000,
     raised: 400000,
     outcome: "60 children received new outfits and gifts.",
+    image: "/media/photos/blind-centre-visitation-2.jpeg",
   },
   {
     slug: "day-of-arafah-feeding",
@@ -48,6 +51,7 @@ export const campaigns: Campaign[] = [
     target: 250000,
     raised: 250000,
     outcome: "25 families fed across two communities.",
+    image: "/media/photos/food-basket-packing.jpeg",
   },
   {
     slug: "blind-centre-visitation",
@@ -61,6 +65,7 @@ export const campaigns: Campaign[] = [
     target: 150000,
     raised: 150000,
     outcome: "Essentials delivered to residents of the Blind Centre.",
+    image: "/media/photos/blind-centre-visitation-1.jpeg",
   },
 ];
 

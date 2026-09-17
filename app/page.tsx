@@ -1,10 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   ArrowUpRight,
   HeartHandshake,
   Users,
-  User,
   Camera,
 } from "lucide-react";
 import { activeCampaign, campaigns, formatNaira } from "@/app/lib/campaigns";
@@ -89,23 +89,43 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Photo-collage placeholders — swap for real distribution/volunteer photos */}
-          <div className="grid grid-flow-col grid-rows-2 grid-cols-3 gap-3 sm:gap-4 h-56 sm:h-72 lg:h-[420px] hero-collage-in">
-            <div className="rounded-full bg-muted border border-border grid place-items-center text-muted-foreground">
-              <User className="w-7 h-7 sm:w-10 sm:h-10" strokeWidth={1.5} />
+          {/* Photo collage — real distribution/volunteer photos */}
+          <div className="grid grid-flow-col grid-rows-2 grid-cols-3 gap-3 sm:gap-4 hero-collage-in">
+            <div className="relative aspect-[3/5] rounded-full border border-border overflow-hidden">
+              <Image
+                src="/media/photos/blind-centre-visitation-6.jpeg"
+                alt="Hearts to Hands volunteers with students"
+                fill
+                className="object-cover"
+              />
             </div>
-            <div className="rounded-full bg-primary" />
+            <div className="aspect-[3/5] rounded-full bg-primary" />
 
-            <div className="rounded-full bg-muted border border-border grid place-items-center text-muted-foreground lg:-translate-y-10">
-              <User className="w-7 h-7 sm:w-10 sm:h-10" strokeWidth={1.5} />
+            <div className="relative aspect-[3/5] rounded-full border border-border overflow-hidden -translate-y-6 sm:-translate-y-8 lg:-translate-y-12">
+              <Image
+                src="/media/photos/blind-centre-visitation-4.jpeg"
+                alt="Hearts to Hands volunteers"
+                fill
+                className="object-cover"
+              />
             </div>
-            <div className="rounded-full bg-muted border border-border grid place-items-center text-muted-foreground lg:-translate-y-10">
-              <User className="w-6 h-6 sm:w-8 sm:h-8" strokeWidth={1.5} />
+            <div className="relative aspect-[3/5] rounded-full border border-border overflow-hidden -translate-y-6 sm:-translate-y-8 lg:-translate-y-12">
+              <Image
+                src="/media/photos/blind-centre-visitation-3.jpeg"
+                alt="Students at a Hearts to Hands visitation"
+                fill
+                className="object-cover"
+              />
             </div>
 
-            <div className="rounded-full bg-accent" />
-            <div className="rounded-full bg-muted border border-border grid place-items-center text-muted-foreground">
-              <User className="w-7 h-7 sm:w-10 sm:h-10" strokeWidth={1.5} />
+            <div className="aspect-[3/5] rounded-full bg-accent" />
+            <div className="relative aspect-[3/5] rounded-full border border-border overflow-hidden">
+              <Image
+                src="/media/photos/blind-centre-visitation-5.jpeg"
+                alt="Hearts to Hands community visitation"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -207,19 +227,28 @@ export default function Home() {
       {/* About */}
       <section className="section bg-secondary/40 border-y border-border">
         <div className="container-page grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative max-w-md mx-auto lg:mx-0">
+          <div className="relative aspect-[4/5] max-w-xs sm:max-w-md mx-auto lg:mx-0">
+            <div
+              className="absolute -bottom-6 -right-6 h-28 w-28 rounded-3xl bg-muted"
+              aria-hidden
+            />
             <div
               className="absolute -top-6 -left-6 h-32 w-32 rounded-3xl bg-primary"
               aria-hidden
             />
-            {/* Photo placeholder — swap for a real about-us photo */}
-            <div className="relative aspect-[4/5] rounded-3xl border border-border bg-background shadow-xl overflow-hidden grid place-items-center text-muted-foreground">
-              <Users className="w-16 h-16" strokeWidth={1.5} />
+            <div className="absolute inset-0 rounded-tl-2xl rounded-bl-2xl rounded-tr-[5rem] rounded-br-[5rem] border border-border bg-background shadow-xl overflow-hidden">
+              <Image
+                src="/media/photos/blind-centre-visitation-2.jpeg"
+                alt="Hearts to Hands team and volunteers"
+                fill
+                sizes="(min-width: 1024px) 24rem, 20rem"
+                className="object-cover"
+              />
             </div>
           </div>
 
-          <div>
-            <div className="grid grid-cols-[auto_1fr] items-center gap-3">
+          <div className="text-center lg:text-left">
+            <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-2 lg:gap-3">
               <span className="h-12 w-12 grid place-items-center rounded-full bg-background text-primary-deep">
                 <Users className="w-5 h-5" strokeWidth={2} />
               </span>
@@ -230,7 +259,7 @@ export default function Home() {
               We are Hearts to Hands!
             </h2>
 
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-lg text-muted-foreground max-w-sm lg:max-w-none mx-auto lg:mx-0">
               A community Sadaqah initiative turning everyday giving into
               direct, dignified support — food baskets, clothing drives, and
               feeding programs delivered straight to the people who need
@@ -290,8 +319,17 @@ export default function Home() {
           <div className="mt-12 grid sm:grid-cols-3 gap-6">
             {recentActivity.map((campaign) => (
               <div key={campaign.slug} className="card overflow-hidden">
-                <div className="aspect-[4/3] bg-muted border-b border-border grid place-items-center text-muted-foreground">
-                  <Camera className="w-8 h-8" strokeWidth={1.5} />
+                <div className="relative aspect-[4/3] bg-muted border-b border-border grid place-items-center text-muted-foreground">
+                  {campaign.image ? (
+                    <Image
+                      src={campaign.image}
+                      alt={campaign.name}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <Camera className="w-8 h-8" strokeWidth={1.5} />
+                  )}
                 </div>
                 <div className="p-6">
                   <h3 className="font-display text-lg font-semibold text-primary-deep">

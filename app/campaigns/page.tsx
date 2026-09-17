@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Calendar, ImageIcon, CalendarClock } from "lucide-react";
 import { campaigns, formatNaira, type Campaign } from "@/app/lib/campaigns";
 
@@ -76,8 +77,17 @@ export default function CampaignsPage() {
           <div className="mt-10 grid sm:grid-cols-2 gap-6">
             {filtered.map((campaign) => (
               <div key={campaign.slug} className="card p-6 flex flex-col gap-4">
-                <div className="aspect-[16/9] rounded-xl bg-muted border border-border grid place-items-center text-muted-foreground">
-                  <ImageIcon className="w-8 h-8" strokeWidth={1.5} />
+                <div className="relative aspect-[16/9] rounded-xl bg-muted border border-border overflow-hidden grid place-items-center text-muted-foreground">
+                  {campaign.image ? (
+                    <Image
+                      src={campaign.image}
+                      alt={campaign.name}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <ImageIcon className="w-8 h-8" strokeWidth={1.5} />
+                  )}
                 </div>
 
                 <div className="flex items-center justify-between gap-3">

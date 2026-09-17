@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Handshake,
   Package,
@@ -131,24 +132,34 @@ export default function GetInvolvedPage() {
 
       <section className="section">
         <div className="container-page grid lg:grid-cols-2 gap-12">
-          <div className="card p-8">
-            <span className="eyebrow">Partner with us</span>
-            <h3 className="mt-3 font-display text-xl font-semibold text-primary-deep">
-              For student & community groups
-            </h3>
-            <p className="mt-3 text-sm text-muted-foreground">
-              We&apos;ve partnered with groups like LAUTECH&apos;s Graduating
-              Muslim Students on visitations and drives. If your group wants
-              to co-host or support a campaign, reach out — we&apos;ll shape
-              something together.
-            </p>
-            <a
-              href="mailto:heartstohands1@gmail.com"
-              className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary"
-            >
-              Start a partnership
-              <ArrowRight className="w-4 h-4" />
-            </a>
+          <div className="card overflow-hidden">
+            <div className="relative aspect-[16/9]">
+              <Image
+                src="/media/photos/blind-centre-visitation-4.jpeg"
+                alt="Hearts to Hands volunteers with LAUTECH's Graduating Muslim Students"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="p-8">
+              <span className="eyebrow">Partner with us</span>
+              <h3 className="mt-3 font-display text-xl font-semibold text-primary-deep">
+                For student & community groups
+              </h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                We&apos;ve partnered with groups like LAUTECH&apos;s
+                Graduating Muslim Students on visitations and drives. If your
+                group wants to co-host or support a campaign, reach out —
+                we&apos;ll shape something together.
+              </p>
+              <a
+                href="mailto:heartstohands1@gmail.com"
+                className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary"
+              >
+                Start a partnership
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
           </div>
 
           <div>

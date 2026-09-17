@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   HeartHandshake,
   ArrowRight,
@@ -61,6 +62,28 @@ export default function AboutPage() {
             turning everyday giving into direct, dignified support for
             families and individuals in need.
           </p>
+        </div>
+      </section>
+
+      <section className="container-page py-10">
+        <div className="grid grid-cols-3 gap-3 sm:gap-4">
+          {[
+            "/media/photos/blind-centre-visitation-2.jpeg",
+            "/media/photos/blind-centre-visitation-4.jpeg",
+            "/media/photos/blind-centre-visitation-6.jpeg",
+          ].map((src) => (
+            <div
+              key={src}
+              className="relative aspect-[4/3] rounded-2xl border border-border overflow-hidden"
+            >
+              <Image
+                src={src}
+                alt="Hearts to Hands team and volunteers"
+                fill
+                className="object-cover"
+              />
+            </div>
+          ))}
         </div>
       </section>
 
