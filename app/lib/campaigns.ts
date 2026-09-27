@@ -2,7 +2,7 @@ export type Campaign = {
   slug: string;
   name: string;
   description: string;
-  season: "Ramadan" | "Eid" | "Day of Arafah" | "Ongoing";
+  season: "Ramadan" | "Eid" | "Ongoing";
   status: "active" | "past";
   startDate: string;
   endDate?: string;
@@ -16,14 +16,14 @@ export type Campaign = {
 export const campaigns: Campaign[] = [
   {
     slug: "ramadan-food-baskets",
-    name: "Ramadan Food Basket Drive",
+    name: "Iftar for the Ummah (Sharing the Blessings of Ramadan)",
     description:
       "Grocery baskets for families fasting through Ramadan, delivered ahead of the month.",
     season: "Ramadan",
     status: "active",
     startDate: "2026-02-18",
-    target: 800000,
-    raised: 310000,
+    target: 2500000,
+    raised: 0,
     image: "/media/photos/food-basket-packing.jpeg",
   },
   {
@@ -39,19 +39,6 @@ export const campaigns: Campaign[] = [
     raised: 400000,
     outcome: "60 children received new outfits and gifts.",
     image: "/media/photos/blind-centre-visitation-2.jpeg",
-  },
-  {
-    slug: "day-of-arafah-feeding",
-    name: "Day of Arafah Feeding Program",
-    description: "Hot meals distributed to families on the Day of Arafah.",
-    season: "Day of Arafah",
-    status: "past",
-    startDate: "2025-06-16",
-    endDate: "2025-06-16",
-    target: 250000,
-    raised: 250000,
-    outcome: "25 families fed across two communities.",
-    image: "/media/photos/food-basket-packing.jpeg",
   },
   {
     slug: "blind-centre-visitation",

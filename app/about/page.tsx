@@ -22,13 +22,13 @@ const values = [
     icon: HandHeart,
     title: "Sadaqah, made simple",
     description:
-      "We exist to make giving easy and direct — every Naira given is tracked to a specific person, family, or need.",
+      "We exist to make giving easy and direct every Naira given is tracked to a specific person, family, or need.",
   },
   {
     icon: Users2,
     title: "Community care",
     description:
-      "We show up in person — distributions, visitations, and drives carried out alongside the people we serve, not at a distance.",
+      "We show up in person distributions, visitations, and drives carried out alongside the people we serve, not at a distance.",
   },
   {
     icon: BookOpenText,
@@ -95,15 +95,15 @@ export default function AboutPage() {
               Why Hearts to Hands started
             </h2>
             <p className="mt-6 text-muted-foreground">
-              [Add the organization&apos;s origin story here — why it started,
+              [Add the organization&apos;s origin story here why it started,
               who started it, and the moment or need that made the first
               campaign happen.]
             </p>
             <p className="mt-4 text-muted-foreground">
               What began as small, direct acts of giving has grown into
-              recurring campaigns around Ramadan, Eid, and the Day of Arafah —
-              always aimed at meeting a specific, named need rather than a
-              vague appeal.
+              recurring campaigns around Ramadan and Eid, plus visitations
+              like our work with the Blind Centre always aimed at meeting a
+              specific, named need rather than a vague appeal.
             </p>
           </div>
 

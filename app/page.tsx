@@ -9,12 +9,11 @@ import {
 } from "lucide-react";
 import { activeCampaign, campaigns, formatNaira } from "@/app/lib/campaigns";
 
-// Preview figures — replace with the organization's real cumulative totals.
 const impactStats = [
-  { value: "135+", label: "Families fed since founding" },
-  { value: `${formatNaira(1_100_000)}+`, label: "Given through Sadaqah" },
-  { value: "4", label: "Campaigns run" },
-  { value: "60+", label: "Children reached" },
+  { value: "50+", label: "Families fed since founding" },
+  { value: formatNaira(800_000), label: "Given through Sadaqah" },
+  { value: "2", label: "Campaigns run" },
+  { value: "120+", label: "Children reached" },
 ];
 
 const quickDonateTiles = [
@@ -227,16 +226,16 @@ export default function Home() {
       {/* About */}
       <section className="section bg-secondary/40 border-y border-border">
         <div className="container-page grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative aspect-[4/5] max-w-xs sm:max-w-md mx-auto lg:mx-0">
+          <div className="relative max-w-xs sm:max-w-md mx-auto lg:mx-0">
             <div
-              className="absolute -bottom-6 -right-6 h-28 w-28 rounded-3xl bg-muted"
+              className="absolute left-0 top-0 h-40 sm:h-52 lg:h-60 w-20 sm:w-28 lg:w-32 -translate-x-6 sm:-translate-x-10 rounded-r-[2.5rem] rounded-l-lg bg-primary"
               aria-hidden
             />
             <div
-              className="absolute -top-6 -left-6 h-32 w-32 rounded-3xl bg-primary"
+              className="absolute bottom-0 right-0 h-32 sm:h-40 lg:h-48 w-28 sm:w-36 lg:w-40 translate-x-4 translate-y-4 rounded-tl-2xl rounded-bl-2xl rounded-tr-[4rem] rounded-br-[4rem] bg-muted"
               aria-hidden
             />
-            <div className="absolute inset-0 rounded-tl-2xl rounded-bl-2xl rounded-tr-[5rem] rounded-br-[5rem] border border-border bg-background shadow-xl overflow-hidden">
+            <div className="relative w-full aspect-[4/5] rounded-tl-2xl rounded-bl-2xl rounded-tr-[5rem] rounded-br-[5rem] border border-border bg-background shadow-xl overflow-hidden">
               <Image
                 src="/media/photos/blind-centre-visitation-2.jpeg"
                 alt="Hearts to Hands team and volunteers"

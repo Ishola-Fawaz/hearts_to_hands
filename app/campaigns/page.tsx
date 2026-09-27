@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Calendar, ImageIcon, CalendarClock } from "lucide-react";
 import { campaigns, formatNaira, type Campaign } from "@/app/lib/campaigns";
 
-const seasons = ["All", "Ramadan", "Eid", "Day of Arafah", "Ongoing"] as const;
+const seasons = ["All", "Ramadan", "Eid", "Ongoing"] as const;
 
 function ProgressBar({ campaign }: { campaign: Campaign }) {
   const pct = Math.min(
