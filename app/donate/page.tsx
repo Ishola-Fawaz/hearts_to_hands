@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Heart, Calendar } from "lucide-react";
-import { DonateForm } from "../components/donate-form";
+import { BankTransferCard } from "../components/bank-transfer";
 import { campaigns, formatNaira } from "@/app/lib/campaigns";
 
 export const metadata: Metadata = {
   title: "Donate",
   description:
-    "Give Sadaqah to an active Hearts to Hands campaign, or set up a monthly Sadaqah Circle gift. Card, bank transfer, and USSD supported.",
+    "Give Sadaqah to an active Hearts to Hands campaign by bank transfer — every gift goes toward a specific, named need.",
 };
 
 const activeCampaigns = campaigns.filter((c) => c.status === "active");
@@ -24,8 +24,8 @@ export default function DonatePage() {
             Give Sadaqah, directly.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">
-            Choose an active campaign or give a fixed amount — every gift goes
-            toward a specific, named need.
+            Choose an active campaign and give directly by bank transfer —
+            every gift goes toward a specific, named need.
           </p>
         </div>
       </section>
@@ -80,7 +80,7 @@ export default function DonatePage() {
       <section className="section">
         <div className="container-page grid lg:grid-cols-2 gap-12 items-start">
           <div>
-            <DonateForm />
+            <BankTransferCard />
           </div>
 
           <div className="lg:pt-4">
@@ -102,8 +102,7 @@ export default function DonatePage() {
             </p>
 
             <div className="mt-10 rounded-2xl border border-border bg-secondary/40 p-6 text-sm text-muted-foreground">
-              [Registration status to be added.] Prefer to give by bank
-              transfer directly?{" "}
+              [Registration status to be added.] Questions about a gift?{" "}
               <a
                 href="mailto:heartstohands1@gmail.com"
                 className="text-primary font-semibold hover:text-primary-deep"
