@@ -228,14 +228,14 @@ export default function Home() {
         <div className="container-page grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative max-w-xs sm:max-w-md mx-auto lg:mx-0">
             <div
-              className="absolute left-0 top-0 h-40 sm:h-52 lg:h-60 w-20 sm:w-28 lg:w-32 -translate-x-6 sm:-translate-x-10 rounded-r-[2.5rem] rounded-l-lg bg-primary"
+              className="hidden lg:block absolute left-0 top-0 h-60 w-32 -translate-x-10 rounded-r-[2.5rem] rounded-l-lg bg-primary"
               aria-hidden
             />
             <div
-              className="absolute bottom-0 right-0 h-32 sm:h-40 lg:h-48 w-28 sm:w-36 lg:w-40 translate-x-4 translate-y-4 rounded-tl-2xl rounded-bl-2xl rounded-tr-[4rem] rounded-br-[4rem] bg-muted"
+              className="hidden lg:block absolute bottom-0 right-0 h-48 w-40 translate-x-4 translate-y-4 rounded-tl-2xl rounded-bl-2xl rounded-tr-[4rem] rounded-br-[4rem] bg-muted"
               aria-hidden
             />
-            <div className="relative w-full aspect-[4/5] rounded-tl-2xl rounded-bl-2xl rounded-tr-[5rem] rounded-br-[5rem] border border-border bg-background shadow-xl overflow-hidden">
+            <div className="relative w-full aspect-[4/5] rounded-2xl lg:rounded-tl-2xl lg:rounded-bl-2xl lg:rounded-tr-[5rem] lg:rounded-br-[5rem] overflow-hidden lg:border lg:border-border lg:bg-background lg:shadow-xl">
               <Image
                 src="/media/photos/blind-centre-visitation-2.jpeg"
                 alt="Hearts to Hands team and volunteers"

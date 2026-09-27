@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { NewsletterForm } from "./newsletter-form";
-import { InstagramIcon, FacebookIcon, XIcon } from "./social-icons";
+import { InstagramIcon } from "./social-icons";
 
 import Logo from "@/public/logo/logo.jpg";
 
@@ -12,8 +12,6 @@ const socials = [
     name: "Instagram",
     href: "https://instagram.com/hearts_to_hands1",
   },
-  { icon: FacebookIcon, name: "Facebook", href: "#" },
-  { icon: XIcon, name: "Twitter / X", href: "#" },
 ];
 
 const organizationLinks = [
