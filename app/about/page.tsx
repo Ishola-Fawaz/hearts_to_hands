@@ -38,12 +38,11 @@ const values = [
   },
 ];
 
-// Placeholder slots — replace with the real founders/team names, roles, and bios.
-const team = [
-  { name: "[Founder Name]", role: "Founder" },
-  { name: "[Team Member Name]", role: "Program Coordinator" },
-  { name: "[Team Member Name]", role: "Outreach Lead" },
-];
+// const team = [
+//   { name: "[Founder Name]", role: "Founder" },
+//   { name: "[Team Member Name]", role: "Program Coordinator" },
+//   { name: "[Team Member Name]", role: "Outreach Lead" },
+// ];
 
 export default function AboutPage() {
   return (
@@ -127,6 +126,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Team
       <section className="section bg-secondary/40 border-y border-border">
         <div className="container-page">
           <span className="eyebrow">Our team</span>
@@ -152,6 +152,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      */}
 
       <section className="section">
         <div className="container-page">
