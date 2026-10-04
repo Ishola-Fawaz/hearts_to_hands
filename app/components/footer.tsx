@@ -148,10 +148,7 @@ export function Footer() {
 
       <div className="border-t border-primary-foreground/15">
         <div className="container-page py-6 flex flex-col sm:flex-row justify-between gap-2 text-xs text-primary-foreground/60">
-          <div>
-            © {new Date().getFullYear()} Hearts to Hands. Registration
-            status: [to be confirmed].
-          </div>
+          <div>© {new Date().getFullYear()} Hearts to Hands.</div>
           <div>Made with care</div>
         </div>
       </div>
