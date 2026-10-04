@@ -94,11 +94,6 @@ export default function AboutPage() {
             <h2 className="mt-4 font-display text-3xl font-extrabold text-primary-deep">
               Why Hearts to Hands started
             </h2>
-            <p className="mt-6 text-muted-foreground">
-              [Add the organization&apos;s origin story here why it started,
-              who started it, and the moment or need that made the first
-              campaign happen.]
-            </p>
             <p className="mt-4 text-muted-foreground">
               What began as small, direct acts of giving has grown into
               recurring campaigns around Ramadan and Eid, plus visitations
@@ -140,8 +135,8 @@ export default function AboutPage() {
           </h2>
 
           <div className="mt-12 grid sm:grid-cols-3 gap-6">
-            {team.map((member) => (
-              <div key={member.name} className="card p-6">
+            {team.map((member, i) => (
+              <div key={i} className="card p-6">
                 <div className="h-16 w-16 rounded-full bg-primary/10 grid place-items-center font-display text-xl font-semibold text-primary">
                   {member.name.startsWith("[") ? "?" : member.name
                     .split(" ")
