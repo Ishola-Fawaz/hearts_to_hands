@@ -140,7 +140,7 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-2.5">
               <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-              [Location — optional]
+              Ogbomoso, Oyo State
             </li>
           </ul>
         </div>

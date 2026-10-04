@@ -28,7 +28,7 @@ export default function TransparencyPage() {
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">
             A running account of what&apos;s been given and what&apos;s been
-            spent — not scattered across posts, but in one place, updated as
+            spent not scattered across posts, but in one place, updated as
             campaigns close.
           </p>
         </div>

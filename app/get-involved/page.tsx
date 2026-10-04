@@ -47,12 +47,12 @@ const upcomingDates = [
   {
     campaign: "Ramadan Food Basket Drive",
     time: "[Date & time]",
-    location: "[Location]",
+    location: "Ogbomoso, Oyo State",
   },
   {
     campaign: "[Next distribution day]",
     time: "[Date & time]",
-    location: "[Location]",
+    location: "Ogbomoso, Oyo State",
   },
 ];
 

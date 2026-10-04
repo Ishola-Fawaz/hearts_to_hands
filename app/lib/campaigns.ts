@@ -23,7 +23,7 @@ export const campaigns: Campaign[] = [
     status: "active",
     startDate: "2026-02-18",
     target: 2500000,
-    raised: 0,
+    raised: 27300,
     image: "/media/photos/food-basket-packing.jpeg",
   },
   {

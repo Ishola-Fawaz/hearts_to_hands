@@ -182,7 +182,7 @@ export default function AboutPage() {
             </a>
           </div>
           <p className="mt-3 text-sm text-muted-foreground">
-            [Add physical location, if the organization has a fixed one.]
+            Based in Ogbomoso, Oyo State, Nigeria.
           </p>
         </div>
       </section>
